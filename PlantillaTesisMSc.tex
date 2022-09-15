@@ -1,20 +1,25 @@
 \documentclass[12pt,spanish,fleqn,openany,letterpaper,pagesize]{scrbook}
 
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}%escribir con acentos sin necesidad de comandos \'{} .
+\usepackage[utf8]{inputenc}%escribir con acentos sin necesidad de comandos \'{} .
+
 \usepackage{fancyhdr}
 \usepackage{epsfig}
 \usepackage{epic}
 \usepackage{eepic}
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb, mathtools, amsfonts}
 \usepackage{threeparttable}
 \usepackage{amscd}
 \usepackage{here}
 \usepackage{graphicx}
 \usepackage{lscape}
 \usepackage{tabularx}
-\usepackage{subfigure}
+\usepackage{tocloft}
 \usepackage{longtable}
+
+
+% For bibliography management
+\usepackage{biblatex}
+\addbibresource{BibliMSc.bib}
 
 
 \usepackage{rotating} %Para rotar texto, objetos y tablas seite. No se ve en DVI solo en PS. Seite 328 Hundebuch
@@ -87,8 +92,9 @@
 \include{Kap4/Kap4}
 \include{Kap5/Kap5}
 \include{Kap6/Kap6}
-\include{Anexos/Anexos}
-\addcontentsline{toc}{chapter}{\numberline{}Bibliograf\'{\i}a}
-\bibliographystyle{apalike}
-\bibliography{BibliMSc}
+
+% If there is any addendum use the following
+% \include{Anexos/Anexos}
+
+\printbibliography
 \end{document}
